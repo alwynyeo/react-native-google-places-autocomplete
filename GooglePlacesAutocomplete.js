@@ -194,6 +194,12 @@ export const GooglePlacesAutocomplete = forwardRef((props, ref) => {
     isFocused: () => inputRef.current.isFocused(),
     clear: () => inputRef.current.clear(),
     getCurrentLocation,
+    selectFirstLocation: () => {
+      // This is to manually select the first location from the search result list view
+      if (dataSource && dataSource.length > 0){
+        _onPress(dataSource[0])
+      }
+    }
   }));
 
   const requestShouldUseWithCredentials = () =>

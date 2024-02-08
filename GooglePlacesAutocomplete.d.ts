@@ -437,6 +437,7 @@ export type GooglePlacesAutocompleteRef = {
   setAddressText(address: string): void;
   getAddressText(): string;
   getCurrentLocation(): void;
+  selectFirstLocation(): void;
 } & TextInput;
 
 export const GooglePlacesAutocomplete: React.ForwardRefExoticComponent<
